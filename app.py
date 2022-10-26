@@ -1,9 +1,10 @@
-from flask import Flask, render_template
-from flask_sqlalchemy import SQLAlchemy
 from datetime import datetime
 
+from flask import Flask, render_template
+from flask_sqlalchemy import SQLAlchemy
+
 app = Flask(__name__)
-app.config['SQLACLHEMY_DATABASE_URI'] = 'sqlite:///blog.db'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///blog.db'
 db = SQLAlchemy(app)
 
 
@@ -29,9 +30,9 @@ def about():
     return render_template('about.html')
 
 
-@app.route('/user/<string:name>/<int:id>')
-def user(name, id):
-    return 'User: ' + name + '-' + str(id)
+@app.route('/create_article')
+def create_article():
+    return render_template('create_article.html')
 
 
 if __name__ == '__main__':
