@@ -5,8 +5,13 @@
 {% endblock %}
 
 {% block body %}
-    <h1>Добавить запись</h1>
+    <div class="container">
+        <h1>Добавить запись</h1>
+    </div>
     <form method="post">
-
+        <input type="text" name="title" id="title" class="container form-control" placeholder="Заголовок записи"><br>
+        <textarea name="intro" id="intro" class="container form-control" placeholder="Введите анонс"></textarea><br>
+        <textarea name="text" id="text" class="container form-control" placeholder="Введите анонс"></textarea><br>
+        <input type="submit" class="btn btn-success" value="Отправить">
     </form>
 {% endblock %}
