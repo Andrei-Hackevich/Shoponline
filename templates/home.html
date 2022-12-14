@@ -2,12 +2,49 @@
 
 
 {% block title %}
-    <title>База высечек</title>
+<title>База высечек</title>
 {% endblock %}
 
 
 {% block body %}
-    <h1>Тут будет находиться база высечек типографии</h1>
+<h1>База высечек</h1><br><br>
+<div class="row row-cols-1 row-cols-md-3 mb-3 text-center">
+    <div class="col">
+        <div class="card mb-4 rounded-3 shadow-sm">
+            <div class="card-header py-3">
+                <h4 class="my-0 fw-normal">Бумага</h4>
+            </div>
+            <div class="card-body">
+                <ul class="list-unstyled mt-3 mb-4">
+                    <li>Квадраты</li>
+                    <li>Прямоугольники</li>
+                    <li>Овалы</li>
+                    <li>Круги</li>
+                    <li>Фигурные</li>
+                </ul>
+                <button type="button" class="w-100 btn btn-lg btn-primary">Перейти к базе высечек для бумаги</button>
+            </div>
+        </div>
+    </div>
+    <div class="col">
+        <div class="card mb-4 rounded-3 shadow-sm">
+            <div class="card-header py-3">
+                <h4 class="my-0 fw-normal">Пленка</h4>
+            </div>
+            <div class="card-body">
+                <ul class="list-unstyled mt-3 mb-4">
+                    <li>Квадраты</li>
+                    <li>Прямоугольники</li>
+                    <li>Овалы</li>
+                    <li>Круги</li>
+                    <li>Фигурные</li>
+                </ul>
+                <button type="button" class="w-100 btn btn-lg btn-primary">Перейти к базе высечек для пленки</button>
+            </div>
+        </div>
+    </div>
+</div>
+
 {% endblock %}
 
 

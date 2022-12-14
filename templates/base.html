@@ -5,9 +5,30 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css">
     {% block title %}{% endblock %}
 </head>
 <body>
-    {% block body %}{% endblock %}
+    <div class="container">
+        <div class="d-flex flex-column flex-md-row align-items-center pb-3 mb-4 border-bottom">
+          <a href="/" class="d-flex align-items-center text-dark text-decoration-none">
+           <span class="fs-4">Ниортис</span>
+          </a>
+
+          <nav class="d-inline-flex mt-2 mt-md-0 ms-md-auto">
+            <a class="me-3 py-2 text-dark text-decoration-none" href="/">Главная</a>
+            <a class="me-3 py-2 text-dark text-decoration-none" href="/about">О проекте</a>
+          </nav>
+        </div>
+        <h1 class="display-4 fw-normal">{% block body %}{% endblock %}</h1>
+
+    <footer class="container blog-footer text-center">
+      <p>База высечек подготовлена <a href="https://niortis.by/">ООО Ниортис</a></p>
+      <p>
+        <a href="/">Главная</a>
+      </p>
+    </footer>
+
+    </div>
 </body>
 </html>
