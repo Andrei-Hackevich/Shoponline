@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+
+{% block title %}
+    <title>Добавление высечки</title>
+{% endblock %}
+
+
+{% block body %}
+    <div class="container">
+        <h1>Добавление высечки</h1>
+    </div>
+    <form method="post">
+        <input type="text" name="visechka_no" id="visechka_no" class="container form-control" placeholder="Номер высечки"><br>
+        <input type="text" name="matherial" id="matherial" class="container form-control" placeholder="Для какгого материала"><br>
+        <input type="number" name="wide" id="wide" class="container form-control" placeholder="Ширина высечки"><br>
+        <input type="number" name="length" id="length" class="container form-control" placeholder="Длина высечки"><br>
+        <input type="number" name="streams" id="streams" class="container form-control" placeholder="Количество ручьев"><br>
+        <input type="number" name="el_in_streams" id="el_in_streams" class="container form-control" placeholder="Количество элементов в одном ручье"><br>
+        <input type="number" name="shaft" id="shaft" class="container form-control" placeholder="Вал на котором располагается высечка"><br>
+        <input type="text" name="form" id="form" class="container form-control" placeholder="Форма высечки"><br>
+        <div class="d-grid gap-2 col-6 mx-auto">
+            <input type="submit" class="btn btn-success" value="Добавить">
+        </div>
+    </form>
+{% endblock %}
+
