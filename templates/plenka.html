@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+
+
+{% block title %}
+    <title>Пленка</title>
+{% endblock %}
+
+
+{% block body %}
+    <div class="container">
+        <h1>Высечки для пленки</h1>
+    </div>
+        {% if visechki|length > 0 %}
+            {% for el in visechki %}
+                <div class="row row-cols-1 row-cols-md-3 mb-3 text-center">
+                    <div class="col">
+                        <div class="card mb-4 rounded-3 shadow-sm">
+                            <div class="card-header py-3">
+                                <h4 class="my-0 fw-normal">Высечка {{ el.size }}</h4>
+                            </div>
+                            <div class="card-body">
+                                <ul class="list-unstyled mt-3 mb-4">
+                                    <li>Форма {{ el.form }}</li>
+                                    <li>Вал {{ el.shaft }}</li>
+                                </ul>
+                                <button type="button" class="w-100 btn btn-lg btn-primary">Детально</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        {% else %}
+            <p>Пока отсутствуют высечки</p>
+        {% endif %}
+
+{% endblock %}
