@@ -39,10 +39,42 @@ def plenka():
     visechki = Visechka.query.filter(Visechka.matherial == 'Пленка').all()
     return render_template('plenka.html', visechki=visechki)
 
+@app.route('/plenka/<int:id>')
+def plenka_detail(id):
+    visechka = Visechka.query.get(id)
+    return render_template('plenka_detail.html', visechka=visechka)
+
+@app.route('/plenka/<int:id>/delete')
+def plenka_delete(id):
+    visechka = Visechka.query.get_or_404(id)
+
+    try:
+        db.session.delete(visechka)
+        db.session.commit()
+        return redirect('/plenka')
+    except:
+        return "При удалении возникла ошибка"
+
 @app.route('/bumaga')
 def bumaga():
     visechki = Visechka.query.filter(Visechka.matherial == 'Бумага').all()
     return render_template('bumaga.html', visechki=visechki)
+
+@app.route('/bumaga/<int:id>')
+def bumaga_detail(id):
+    visechka = Visechka.query.get(id)
+    return render_template('bumaga_detail.html', visechka=visechka)
+
+@app.route('/bumaga/<int:id>/delete')
+def bumaga_delete(id):
+    visechka = Visechka.query.get_or_404(id)
+
+    try:
+        db.session.delete(visechka)
+        db.session.commit()
+        return redirect('/bumaga')
+    except:
+        return "При удалении возникла ошибка"
 
 
 @app.route('/create', methods=['POST', 'GET'])

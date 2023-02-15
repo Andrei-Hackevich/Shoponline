@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block title %}
+<title>Высечка: {{ visechka.form }} {{ visechka.size }}</title>
+{% endblock %}
+
+{% block body %}
+<div class="container">
+    <div class="col-12 text-center">
+        <h2>Высечка: {{ visechka.form }} {{ visechka.size }}</h2>
+        <h2>Материал:    {{ visechka.matherial }}</h2>
+        <h2>Ширина этикетки:    {{ visechka.wide }} мм</h2>
+        <h2>Длинна этикетки:    {{ visechka.length }} мм</h2>
+        <h2>Ручьев на высечке:    {{ visechka.streams }} шт.</h2>
+        <h2>Элементов в ручье:    {{ visechka.el_in_streams }} шт.</h2>
+        <h2>Вал:    {{ visechka.shaft }}</h2>
+        <h2>Износ высечки:    {{ visechka.iznos }}%</h2>
+        <a class="btn btn-danger">Редактировать</a>
+        <a class="btn btn-warning" href="/plenka/{{ visechka.id }}/delete">Удалить</a>
+    </div>
+</div>
+{% endblock %}
