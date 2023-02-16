@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+
+{% block title %}
+    <title>Редактирование высечки</title>
+{% endblock %}
+
+
+{% block body %}
+    <div class="container">
+        <h1>Редактирование высечки</h1>
+    </div>
+    <form method="post">
+        <input type="text" name="visechka_no" id="visechka_no" class="container form-control" placeholder="Номер высечки: {{ visechka.visechka_no }}"><br>
+        <input type="text" name="matherial" id="matherial" class="container form-control" placeholder="Материал: {{ visechka.matherial }}"><br>
+        <input type="number" name="wide" id="wide" class="container form-control" placeholder="Ширина высечки: {{ visechka.wide }}"><br>
+        <input type="number" name="length" id="length" class="container form-control" placeholder="Длинна высечки: {{ visechka.length }}"><br>
+        <input type="number" name="streams" id="streams" class="container form-control" placeholder="Количесвто ручьев: {{ visechka.streams }}"><br>
+        <input type="number" name="el_in_streams" id="el_in_streams" class="container form-control" placeholder="Количество элементов в ручье: {{ visechka.el_in_streams }}"><br>
+        <input type="number" name="shaft" id="shaft" class="container form-control" placeholder="Вал: {{ visechka.shaft }}"><br>
+        <input type="text" name="form" id="form" class="container form-control" placeholder="Форма высечки: {{ visechka.form }}"><br>
+        <input type="number" name="iznos" id="iznos" class="container form-control" placeholder="Износ высечки: {{ visechka.iznos }}%"><br>
+        <div class="d-grid gap-2 col-6 mx-auto">
+            <input type="submit" class="btn btn-success" value="Редактировать">
+        </div>
+    </form>
+{% endblock %}

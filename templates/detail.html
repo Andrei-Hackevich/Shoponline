@@ -15,8 +15,8 @@
         <h2>Элементов в ручье:    {{ visechka.el_in_streams }} шт.</h2>
         <h2>Вал:    {{ visechka.shaft }}</h2>
         <h2>Износ высечки:    {{ visechka.iznos }}%</h2>
-        <a class="btn btn-danger">Редактировать</a>
-        <a class="btn btn-warning" href="/plenka/{{ visechka.id }}/delete">Удалить</a>
+        <a class="btn btn-danger" href="/{{ visechka.id }}/update">Редактировать</a>
+        <a class="btn btn-warning" href="/{{ visechka.id }}/delete">Удалить</a>
     </div>
 </div>
 {% endblock %}
